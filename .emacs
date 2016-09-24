@@ -70,3 +70,7 @@
  )
 (setq compilation-read-command nil)
 (global-set-key (kbd "M-a") 'compile)
+(global-set-key (kbd "M-g") 'gdb)
+(global-set-key (kbd "C-s") 'save-buffer)
+(global-set-key (kbd "C-z") 'undo)
+(cua-mode t)
