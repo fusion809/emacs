@@ -76,6 +76,7 @@
 ;; Set keyboard shortcuts
 (global-set-key (kbd "M-a") 'compile)
 (global-set-key (kbd "M-g") 'gdb)
+(global-set-key (kbd "M-w") 'browse-web)
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-z") 'undo)
 ;; Enable CUA mode, which provides more traditional keyboard shortcuts for copy, paste, etc.s
