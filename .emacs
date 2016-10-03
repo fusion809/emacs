@@ -19,6 +19,9 @@
  '(custom-safe-themes
    (quote
     ("98cc377af705c0f2133bb6d340bf0becd08944a588804ee655809da5d8140de6" "5dc0ae2d193460de979a463b907b4b2c6d2c9c4657b2e9e66b8898d2592e3de5" "74c328628e9ced700633c9740666e56f40da5062d93b99b7f2cabb54d0b9194a" "a800120841da457aa2f86b98fb9fd8df8ba682cebde033d7dbf8077c1b7d677a" default)))
+ '(elfeed-feeds
+   (quote
+    ("https://github.com/Microsoft/vscode/releases.atom" "https://github.com/atom/atom/releases.atom")))
  '(fci-rule-color "#20240E")
  '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
  '(highlight-tail-colors
@@ -35,7 +38,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (material-theme pylint python-cell go cpputils-cmake rpm-spec-mode sage-shell-mode pkgbuild-mode monokai-theme markdown-mode)))
+    (elfeed elpy material-theme pylint python-cell go cpputils-cmake rpm-spec-mode sage-shell-mode pkgbuild-mode monokai-theme markdown-mode)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(vc-annotate-background nil)
@@ -74,3 +77,4 @@
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-z") 'undo)
 (cua-mode t)
+(global-set-key (kbd "C-x w") 'elfeed)
