@@ -71,10 +71,17 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(setq compilation-read-command nil)
+
+;; Set keyboard shortcuts
 (global-set-key (kbd "M-a") 'compile)
 (global-set-key (kbd "M-g") 'gdb)
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-z") 'undo)
+;; Enable CUA mode, which provides more traditional keyboard shortcuts for copy, paste, etc.s
 (cua-mode t)
 (global-set-key (kbd "C-x w") 'elfeed)
+
+;; Set environment variables
+(setq initial-buffer-choice "~/Documents/CodeLite/CPP-Math-Projects/Simple-Pendulum")
+(setq ring-bell-function 'ignore)
+(setq compilation-read-command nil)
