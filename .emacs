@@ -39,7 +39,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (elfeed elpy material-theme pylint python-cell go cpputils-cmake rpm-spec-mode sage-shell-mode pkgbuild-mode monokai-theme markdown-mode)))
+    (gnuplot-mode elfeed elpy material-theme pylint python-cell go cpputils-cmake rpm-spec-mode sage-shell-mode pkgbuild-mode monokai-theme markdown-mode)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(vc-annotate-background nil)
@@ -79,11 +79,13 @@
 (global-set-key (kbd "M-w") 'browse-web)
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "C-o") 'menu-find-file-existing)
+(global-set-key (kbd "C-S-o") 'dired)
 ;; Enable CUA mode, which provides more traditional keyboard shortcuts for copy, paste, etc.s
 (cua-mode t)
 (global-set-key (kbd "C-x w") 'elfeed)
 
 ;; Set environment variables
-(setq initial-buffer-choice "~/Documents/CodeLite/CPP-Math-Projects/Simple-Pendulum")
+;;(setq initial-buffer-choice "~/Documents/CodeLite/CPP-Math-Projects/Simple-Pendulum")
 (setq ring-bell-function 'ignore)
 (setq compilation-read-command nil)
