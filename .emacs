@@ -101,3 +101,9 @@
 ;;(setq initial-buffer-choice "~/Documents/CodeLite/CPP-Math-Projects/Simple-Pendulum")
 (setq ring-bell-function 'ignore)
 (setq compilation-read-command nil)
+
+;; if ~/.emacs.d/vendor/coffee-mode is absent git clone defunkt/coffee-mode to it!
+(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
+(require 'coffee-mode)
+(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
