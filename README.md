@@ -14,3 +14,7 @@ My GNU Emacs configuration settings, originally developed on a Ubuntu 16.04.1 LT
 | `ispell-buffer`           | `M-s`     | Run spell-checker on current buffer.                           |
 | `load-file`               | `C-l`     | Load Emacs Lisp file.                                          |
 | `menu-find-file-existing` | `C-o`     | Open file.                                                     |
+| `package-install`         | `C-p`     | Run the in-built package installer.                            |
+| `save-buffer`             | `C-s`     | Save the current file.                                         |
+| `term`                    | `C-t`     | Open the terminal buffer.                                      |
+| `undo`                    | `C-z`     | Undo the last change.                                          |
