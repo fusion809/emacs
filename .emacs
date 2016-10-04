@@ -1,7 +1,16 @@
 ;; Packages
 (require 'package) ;; You might already have this line
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa-stable" . "http://stable.melpa.org/packages/")))))
+;;(add-to-list 'package-archives
+;;             '("melpa" . "https://melpa.org/packages/"))
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
@@ -39,7 +48,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (gnuplot-mode elfeed elpy material-theme pylint python-cell go cpputils-cmake rpm-spec-mode sage-shell-mode pkgbuild-mode monokai-theme markdown-mode)))
+    (matlab-mode rust-mode lua-mode php-mode dockerfile-mode clojure-mode go-mode haskell-mode coffee-mode js2-mode gnuplot-mode elfeed elpy material-theme pylint python-cell go cpputils-cmake rpm-spec-mode sage-shell-mode pkgbuild-mode monokai-theme markdown-mode)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(vc-annotate-background nil)
@@ -81,6 +90,8 @@
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-o") 'menu-find-file-existing)
 (global-set-key (kbd "C-S-o") 'dired)
+(global-set-key (kbd "C-p") 'package-install)
+(global-set-key (kbd "C-l") 'load-file)
 ;; Enable CUA mode, which provides more traditional keyboard shortcuts for copy, paste, etc.s
 (cua-mode t)
 (global-set-key (kbd "C-x w") 'elfeed)
