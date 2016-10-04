@@ -18,3 +18,5 @@ My GNU Emacs configuration settings, originally developed on a Ubuntu 16.04.1 LT
 | `save-buffer`             | `C-s`     | Save the current file.                                         |
 | `term`                    | `C-t`     | Open the terminal buffer.                                      |
 | `undo`                    | `C-z`     | Undo the last change.                                          |
+
+plus the [CUA bindings](https://www.gnu.org/software/emacs/manual/html_node/emacs/CUA-Bindings.html). 
