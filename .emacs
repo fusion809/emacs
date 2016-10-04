@@ -37,12 +37,28 @@
      ("#F309DF" . 85)
      ("#20240E" . 100))))
  '(hl-sexp-background-color "#1c1f26")
- )
-(add-to-list 'package-archives  (quote
-   (("melpa" . "http://melpa.org/packages/")
-    ("marmalade" . "https://marmalade-repo.org/packages/")
-    ("melpa-stable" . "http://stable.melpa.org/packages/")
-    )))
+ '(package-selected-packages
+   (quote
+    (sage-shell-mode yasnippet tabbar-ruler rust-mode rpm-spec-mode pyvenv python-cell pylint pkgbuild-mode php-mode monokai-theme matlab-mode material-theme markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot-mode elfeed dockerfile-mode deferred cpputils-cmake coffee-mode clojure-mode))))
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
+
+;;http://emacs.stackexchange.com/a/27573/11131
+;(defun my-package-load-melpa-only ()
+;  "Load package manager with MELPA only"
+;  (interactive)
+;  (if (eq nil (featurep 'package))  ; check if package feature is loaded
+;      ((require 'package)
+;       (package-initialize)
+;       (message "Initializing package manager")))
+;  (cond (
+;   (boundp 'package-archives)
+;   (setq package-archives '())
+;   ))
+;  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+;)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -64,6 +80,8 @@
 (global-set-key (kbd "C-S-o") 'dired)
 (global-set-key (kbd "C-p") 'package-install)
 (global-set-key (kbd "C-l") 'load-file)
+(global-set-key (kbd "M-r") 'package-refresh-contents)
+
 ;; Enable CUA mode, which provides more traditional keyboard shortcuts for copy, paste, etc.s
 (cua-mode t)
 (global-set-key (kbd "C-x w") 'elfeed)
