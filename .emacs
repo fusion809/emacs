@@ -68,7 +68,7 @@
 (global-set-key (kbd "C-x w") 'elfeed)
 
 ;; Set environment variables
-;;(setq initial-buffer-choice "~/Documents/CodeLite/CPP-Math-Projects/Simple-Pendulum")
+;(setq initial-buffer-choice "~/Documents/CodeLite/CPP-Math-Projects/Simple-Pendulum")
 (setq ring-bell-function 'ignore)
 (setq compilation-read-command nil)
 
@@ -79,4 +79,4 @@
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 
 ;; Add tabbar adjustments
-;;(load-file "~/.emacs.d/tabbar.el")
+;(load-file "~/.emacs.d/tabbar.el")
