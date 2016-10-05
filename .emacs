@@ -45,26 +45,7 @@
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
-;;http://emacs.stackexchange.com/a/27573/11131
-;(defun my-package-load-melpa-only ()
-;  "Load package manager with MELPA only"
-;  (interactive)
-;  (if (eq nil (featurep 'package))  ; check if package feature is loaded
-;      ((require 'package)
-;       (package-initialize)
-;       (message "Initializing package manager")))
-;  (cond (
-;   (boundp 'package-archives)
-;   (setq package-archives '())
-;   ))
-;  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-;)
-
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  )
 
 ;; Set keyboard shortcuts
