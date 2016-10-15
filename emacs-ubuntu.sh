@@ -8,6 +8,7 @@ fi
 
 cd $PRG/emacs-$pkgver
 ./autogen.sh
+unset CC
 ./configure --prefix=/usr --with-x-toolkit=gtk2 CFLAGS=-no-pie
 make
 sudo checkinstall --pkgversion="$pkgver" --pkgname="emacs-gtk2" --maintainer="Brenton Horne <brentonhorne77@gmail.com>"
