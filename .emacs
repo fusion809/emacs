@@ -58,7 +58,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (python-mode python-pylint powershell twilight-bright-theme vala-mode white-theme js2-mode python gnome-c-style sage-shell-mode yasnippet tabbar-ruler rust-mode rpm-spec-mode pyvenv python-cell pylint pkgbuild-mode php-mode monokai-theme matlab-mode markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot-mode elfeed dockerfile-mode deferred cpputils-cmake coffee-mode clojure-mode)))
+    (python-mode python-pylint powershell twilight-bright-theme vala-mode white-theme js2-mode gnome-c-style sage-shell-mode yasnippet tabbar-ruler rust-mode rpm-spec-mode pyvenv python-cell pylint pkgbuild-mode php-mode monokai-theme matlab-mode markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot-mode elfeed dockerfile-mode deferred cpputils-cmake coffee-mode clojure-mode)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(vc-annotate-background nil)
