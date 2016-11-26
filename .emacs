@@ -3,6 +3,7 @@
 (package-initialize)
 
 (require 'package) ;; You might already have this line
+(setq use-package-always-ensure t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -56,9 +57,6 @@
      ("#20240E" . 100))))
  '(hl-sexp-background-color "#1c1f26")
  '(magit-diff-use-overlays nil)
- '(package-selected-packages
-   (quote
-    (python-mode python-pylint powershell twilight-bright-theme vala-mode white-theme js2-mode gnome-c-style sage-shell-mode yasnippet tabbar-ruler rust-mode rpm-spec-mode pyvenv python-cell pylint pkgbuild-mode php-mode monokai-theme matlab-mode markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot-mode elfeed dockerfile-mode deferred cpputils-cmake coffee-mode clojure-mode)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(vc-annotate-background nil)
@@ -128,3 +126,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(dolist (package '(python-mode python-pylint powershell twilight-bright-theme vala-mode white-theme js2-mode gnome-c-style sage-shell-mode yasnippet tabbar-ruler rust-mode rpm-spec-mode pyvenv python-cell pylint pkgbuild-mode php-mode monokai-theme matlab-mode markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot-mode elfeed dockerfile-mode deferred cpputils-cmake coffee-mode clojure-mode))
+ (unless (package-installed-p package)
+   (package-install package))
+   (require package))))
