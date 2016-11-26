@@ -100,7 +100,6 @@
 (global-set-key (kbd "C-o") 'menu-find-file-existing)
 (global-set-key (kbd "C-S-o") 'dired)
 (global-set-key (kbd "C-p") 'package-install)
-(global-set-key (kbd "M-l") 'package-list)
 (global-set-key (kbd "C-l") 'load-file)
 (global-set-key (kbd "M-r") 'package-refresh-contents)
 
