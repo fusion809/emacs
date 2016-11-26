@@ -1,5 +1,5 @@
 #!/bin/bash
-GHUBM="$HOME/GitHub/mine"
+GHUBM="$HOME/GitHub/mine/editors"
 EMD="$HOME/.emacs.d"
 if ! [[ -d "$GHUBM/emacs" ]]; then
   if ! [[ -d "$GHUBM" ]]; then
@@ -10,5 +10,4 @@ if ! [[ -d "$GHUBM/emacs" ]]; then
   if ! [[ -d "$EMD" ]]; then
     mkdir -p "$EMD"
   fi
-  cp $GHUBM/emacs/taskbar.el $EMD
 fi
