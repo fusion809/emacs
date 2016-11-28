@@ -11,3 +11,7 @@ if ! [[ -d "$GHUBM/emacs" ]]; then
     mkdir -p "$EMD"
   fi
 fi
+
+if ! [[ -d $HOME/.emacs.d/vendor/coffee-mode ]]; then
+  git clone https://github.com/defunkt/coffee-mode $HOME/.emacs.d/vendor/coffee-mode
+fi
