@@ -127,7 +127,7 @@
  ;; If there is more than one, they won't work right.
  )
 
-(dolist (package '(python-mode python-pylint powershell vala-mode sage-shell-mode yasnippet tabbar-ruler rust-mode rpm-spec-mode pyvenv python-cell pylint pkgbuild-mode php-mode monokai-theme matlab-mode markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot-mode elfeed dockerfile-mode deferred cpputils-cmake coffee-mode clojure-mode))
+(dolist (package '(python-mode python-pylint powershell vala-mode sage-shell-mode tabbar-ruler rust-mode rpm-spec-mode pyvenv python-cell pylint pkgbuild-mode php-mode monokai-theme matlab-mode markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot-mode elfeed dockerfile-mode deferred cpputils-cmake coffee-mode clojure-mode))
  (unless (package-installed-p package)
    (package-install package))
    (require package))))
