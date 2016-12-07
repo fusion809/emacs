@@ -19,7 +19,7 @@
  '(custom-enabled-themes (quote (monokai)))
  '(custom-safe-themes
    (quote
-    ("a2dd771a05705be2a6e6adb6ddbc7a27ebf49edab1dffdbefe243096becba7c9" "c1390663960169cd92f58aad44ba3253227d8f715c026438303c09b9fb66cdfb" "28c07d8e75ed7e2ea9154239caa4f9d3fc831cf2340ea3e307ee49b4321dc7f5" "98cc377af705c0f2133bb6d340bf0becd08944a588804ee655809da5d8140de6" "5dc0ae2d193460de979a463b907b4b2c6d2c9c4657b2e9e66b8898d2592e3de5" "74c328628e9ced700633c9740666e56f40da5062d93b99b7f2cabb54d0b9194a" "a800120841da457aa2f86b98fb9fd8df8ba682cebde033d7dbf8077c1b7d677a" default)))
+    ("1dffeecd1565d04cd2059234e872cd80fcbe813488602d5c42b5c9e576924d9f" "a2dd771a05705be2a6e6adb6ddbc7a27ebf49edab1dffdbefe243096becba7c9" "c1390663960169cd92f58aad44ba3253227d8f715c026438303c09b9fb66cdfb" "28c07d8e75ed7e2ea9154239caa4f9d3fc831cf2340ea3e307ee49b4321dc7f5" "98cc377af705c0f2133bb6d340bf0becd08944a588804ee655809da5d8140de6" "5dc0ae2d193460de979a463b907b4b2c6d2c9c4657b2e9e66b8898d2592e3de5" "74c328628e9ced700633c9740666e56f40da5062d93b99b7f2cabb54d0b9194a" "a800120841da457aa2f86b98fb9fd8df8ba682cebde033d7dbf8077c1b7d677a" default)))
  '(elfeed-feeds
    (quote
     ("https://github.com/Microsoft/vscode/releases.atom" "https://github.com/atom/atom/releases.atom")))
@@ -57,6 +57,9 @@
      ("#20240E" . 100))))
  '(hl-sexp-background-color "#1c1f26")
  '(magit-diff-use-overlays nil)
+ '(package-selected-packages
+   (quote
+    (all-the-icons-dired gnuplot white-theme vala-mode twilight-bright-theme tabbar-ruler sage-shell-mode rust-mode rpm-spec-mode pyvenv python-pylint python-mode python-cell pylint powershell pkgbuild-mode php-mode monokai-theme matlab-mode markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot-mode elfeed dockerfile-mode cpputils-cmake coffee-mode clojure-mode)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(vc-annotate-background nil)
@@ -118,7 +121,15 @@
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 
-(dolist (package '(python-mode python-pylint powershell vala-mode sage-shell-mode tabbar-ruler rust-mode rpm-spec-mode pyvenv python-cell pylint pkgbuild-mode php-mode monokai-theme markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot-mode elfeed dockerfile-mode cpputils-cmake coffee-mode clojure-mode))
+(dolist (package '(python-mode python-pylint powershell vala-mode sage-shell-mode tabbar-ruler rust-mode rpm-spec-mode pyvenv python-cell pylint pkgbuild-mode php-mode monokai-theme markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot gnuplot-mode elfeed dockerfile-mode cpputils-cmake coffee-mode clojure-mode))
  (unless (package-installed-p package)
    (package-install package))
    (require package))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(speedbar 1)
