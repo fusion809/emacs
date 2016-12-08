@@ -13,6 +13,7 @@
    [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector
    ["#272822" "#F92672" "#A6E22E" "#E6DB74" "#66D9EF" "#FD5FF0" "#A1EFE4" "#F8F8F2"])
+ '(speedbar-show-unknown-files t)
  '(ansi-term-color-vector
    [unspecified "#FFFFFF" "#d15120" "#5f9411" "#d2ad00" "#6b82a7" "#a66bab" "#6b82a7" "#505050"] t)
  '(compilation-message-face (quote default))
@@ -92,26 +93,27 @@
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
 ;; Set keyboard shortcuts
+;; Meta shortcuts
 (global-set-key (kbd "M-a") 'compile)
 (global-set-key (kbd "M-g") 'gdb)
-(global-set-key (kbd "M-t") 'term)
-(global-set-key (kbd "M-s") 'ispell-buffer)
-(global-set-key (kbd "C-f") 'isearch-forward)
-(global-set-key (kbd "M-w") 'browse-web)
-(global-set-key (kbd "C-s") 'save-buffer)
-(global-set-key (kbd "C-z") 'undo)
-(cua-mode t)
-(global-set-key (kbd "C-a") 'mark-whole-buffer)
-;(global-set-key (kbd "C-c") 'kill-ring-save)
-(global-set-key (kbd "C-o") 'menu-find-file-existing)
-(global-set-key (kbd "C-S-o") 'dired)
-(global-set-key (kbd "C-p") 'package-install)
-(global-set-key (kbd "C-l") 'load-file)
 (global-set-key (kbd "M-r") 'package-refresh-contents)
-
-;; Enable CUA mode, which provides more traditional keyboard shortcuts for copy, paste, etc.s
-(cua-mode t)
-(global-set-key (kbd "C-x w") 'elfeed)
+(global-set-key (kbd "M-s") 'ispell-buffer)
+(global-set-key (kbd "M-t") 'term)
+(global-set-key (kbd "M-w") 'browse-web)
+;; Ctrl shortcuts
+(global-set-key (kbd "C-a") 'mark-whole-buffer)
+(global-set-key (kbd "C-c") 'kill-ring-save)
+(global-set-key (kbd "C-e") 'elfeed)
+(global-set-key (kbd "C-f") 'isearch-forward)
+(global-set-key (kbd "C-l") 'load-file)
+(global-set-key (kbd "C-o") 'menu-find-file-existing)
+(global-set-key (kbd "C-p") 'package-install)
+(global-set-key (kbd "C-s") 'save-buffer)
+(global-set-key (kbd "C-v") 'yank)
+(global-set-key (kbd "C-x") 'kill-region)
+(global-set-key (kbd "C-z") 'undo)
+;; Ctrl-Shift shortcuts
+(global-set-key (kbd "C-S-o") 'dired)
 
 ;; Set environment variables
 ;(setq initial-buffer-choice "~/Documents/CodeLite/CPP-Math-Projects/Simple-Pendulum")
@@ -136,3 +138,5 @@
  )
 
 (speedbar 1)
+(setq speedbar-directory-unshown-regexp "^\\(CVS\\|RCS\\|SCCS\\|\\.\\.*$\\)\\'")
+(setq speedbar-directory-unshown-regexp "^$")
