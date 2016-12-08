@@ -59,7 +59,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (all-the-icons-dired gnuplot white-theme vala-mode twilight-bright-theme tabbar-ruler sage-shell-mode rust-mode rpm-spec-mode pyvenv python-pylint python-mode python-cell pylint powershell pkgbuild-mode php-mode monokai-theme matlab-mode markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot-mode elfeed dockerfile-mode cpputils-cmake coffee-mode clojure-mode)))
+    (dired-icon all-the-icons-dired gnuplot white-theme vala-mode twilight-bright-theme tabbar-ruler sage-shell-mode rust-mode rpm-spec-mode pyvenv python-pylint python-mode python-cell pylint powershell pkgbuild-mode php-mode monokai-theme matlab-mode markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot-mode elfeed dockerfile-mode cpputils-cmake coffee-mode clojure-mode)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(vc-annotate-background nil)
@@ -100,6 +100,9 @@
 (global-set-key (kbd "M-w") 'browse-web)
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-z") 'undo)
+(cua-mode t)
+(global-set-key (kbd "C-a") 'mark-whole-buffer)
+;(global-set-key (kbd "C-c") 'kill-ring-save)
 (global-set-key (kbd "C-o") 'menu-find-file-existing)
 (global-set-key (kbd "C-S-o") 'dired)
 (global-set-key (kbd "C-p") 'package-install)
