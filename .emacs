@@ -2,7 +2,7 @@
 
 (package-initialize)
 
-(require 'package) ;; You might already have this line
+(require 'package)
 (setq use-package-always-ensure t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -126,15 +126,6 @@
 (require 'coffee-mode)
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
-;(autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
-;(add-to-list
-; 'auto-mode-alist
-; '("\\.m$" . matlab-mode))
-;(setq matlab-indent-function t)
-;(setq matlab-shell-command "matlab")
-;(require 'octave)
-;(autoload 'octave "octave" "Loading octave-mode" t)
-;(add-to-list 'auto-mode-alist '("\\.m\\'" . octave))
 (progn
 (autoload 'octave-mode "octave")
 (setq auto-mode-alist (cons '("\\.m\\'" . octave-mode) auto-mode-alist))) 
