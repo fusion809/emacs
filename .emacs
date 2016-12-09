@@ -135,8 +135,8 @@
 ;(require 'octave)
 ;(autoload 'octave "octave" "Loading octave-mode" t)
 ;(add-to-list 'auto-mode-alist '("\\.m\\'" . octave))
-(auto-load 'octave-mode "octave")
-(setq auto-mode-alist
+(autoload 'octave "octave")
+(setq automode-alist
 (cons '("\\.m$" . octave) auto-mode-alist))
 
 (dolist (package '(python-mode python-pylint powershell vala-mode sage-shell-mode tabbar-ruler rpm-spec-mode pyvenv pylint pkgbuild-mode monokai-theme markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot gnuplot-mode elfeed dockerfile-mode cpputils-cmake coffee-mode clojure-mode))
