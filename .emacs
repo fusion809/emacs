@@ -93,6 +93,7 @@
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
 ;; Set keyboard shortcuts
+(cua-mode t)
 ;; Meta shortcuts
 (global-set-key (kbd "M-a") 'compile)
 (global-set-key (kbd "M-g") 'gdb)
@@ -125,6 +126,7 @@
 (require 'coffee-mode)
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
+(add-to-list 'auto-mode-alist '("\\.m$" . matlab-mode))
 
 (dolist (package '(python-mode python-pylint powershell vala-mode sage-shell-mode tabbar-ruler rpm-spec-mode pyvenv pylint pkgbuild-mode monokai-theme markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot gnuplot-mode elfeed dockerfile-mode cpputils-cmake coffee-mode clojure-mode))
  (unless (package-installed-p package)
