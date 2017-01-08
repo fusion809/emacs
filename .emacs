@@ -59,7 +59,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (less-css-mode dired-icon all-the-icons-dired gnuplot white-theme vala-mode twilight-bright-theme tabbar-ruler sage-shell-mode rust-mode rpm-spec-mode pyvenv python-pylint python-mode python-cell pylint powershell pkgbuild-mode monokai-theme markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot-mode elfeed dockerfile-mode cpputils-cmake coffee-mode clojure-mode)))
+    (auto-complete less-css-mode dired-icon all-the-icons-dired gnuplot white-theme vala-mode twilight-bright-theme tabbar-ruler sage-shell-mode rust-mode rpm-spec-mode pyvenv python-pylint python-mode python-cell pylint powershell pkgbuild-mode monokai-theme markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot-mode elfeed dockerfile-mode cpputils-cmake coffee-mode clojure-mode)))
  '(pos-tip-background-color "%A6E22E")
  '(pos-tip-foreground-color "%272822")
  '(speedbar-show-unknown-files t)
@@ -115,6 +115,7 @@
 (global-set-key (kbd "C-z") 'undo)
 ;; Ctrl-Shift shortcuts
 (global-set-key (kbd "C-S-o") 'dired)
+(global-set-key (kbd "C-M-r") 'redraw-display)
 
 ;; Set environment variables
 ;(setq initial-buffer-choice "~/Documents/CodeLite/CPP-Math-Projects/Simple-Pendulum")
