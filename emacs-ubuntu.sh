@@ -12,5 +12,5 @@ cd $PRG/emacs-$pkgver
 unset CC
 ./configure --prefix=/usr --with-x-toolkit="$toolkit" CFLAGS=-no-pie
 make
-sudo checkinstall --pkgversion="$pkgver" --pkgname="emacs-$toolkit" --maintainer="Brenton Horne <brentonhorne77@gmail.com>"
+sudo checkinstall --pkgversion="$pkgver" --pkgname="emacs-$toolkit" --maintainer="fusion809"
 cp emacs-$toolkit_$pkgver-1_amd64.deb ../Deb
