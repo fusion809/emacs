@@ -59,7 +59,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (auto-complete less-css-mode dired-icon all-the-icons-dired gnuplot white-theme vala-mode twilight-bright-theme tabbar-ruler sage-shell-mode rust-mode rpm-spec-mode pyvenv python-pylint python-mode python-cell pkgbuild-mode monokai-theme markdown-mode lua-mode highlight-indentation haskell-mode go-mode go gnuplot-mode elfeed dockerfile-mode cpputils-cmake coffee-mode clojure-mode)))
+    (auto-complete less-css-mode dired-icon all-the-icons-dired gnuplot-mode white-theme vala-mode twilight-bright-theme tabbar-ruler sage-shell-mode rust-mode rpm-spec-mode pyvenv python-pylint python-cell pkgbuild-mode markdown-mode lua-mode highlight-indentation haskell-mode elfeed dockerfile-mode cpputils-cmake clojure-mode)))
  '(pos-tip-background-color "%A6E22E")
  '(pos-tip-foreground-color "%272822")
  '(speedbar-show-unknown-files t)
@@ -91,6 +91,8 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'monokai t)
 
 ;; Set keyboard shortcuts
 (cua-mode t)
@@ -131,7 +133,7 @@
 (autoload 'octave-mode "octave")
 (setq auto-mode-alist (cons '("\\.m\\'" . octave-mode) auto-mode-alist))) 
 
-(dolist (package '(python-mode monokai-theme markdown-mode lua-mode gnuplot gnuplot-mode elfeed dockerfile-mode cpputils-cmake coffee-mode))
+(dolist (package '(markdown-mode lua-mode gnuplot-mode elfeed dockerfile-mode))
  (unless (package-installed-p package)
    (package-install package))
    (require package))
